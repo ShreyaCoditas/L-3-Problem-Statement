@@ -63,6 +63,19 @@ public class Recipe {
     @Column(name = "version")
     private Integer version;
 
+    @Column(name = "file_url")
+    private String fileUrl;
+
+    @Column(name = "file_type")
+    private String fileType; // pdf, docx, jpg, png, txt
+
+    @Column(name = "file_name")
+    private String fileName;
+
+    @Column(name = "file_size")
+    private Long fileSize;
+
+
 
     @PrePersist
     protected void onCreate(){

@@ -3,6 +3,7 @@ package com.example.recipemanagement.dto;
 import com.example.recipemanagement.constants.Roles;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.Builder;
 import lombok.Data;
 
@@ -20,6 +21,6 @@ public class CreateRegisterDto {
     @NotBlank(message = "password is required")
     private String password;
 
-    @NotBlank(message = "role is required")
+    @NotNull(message = "role is required")
     private Roles role;
 }

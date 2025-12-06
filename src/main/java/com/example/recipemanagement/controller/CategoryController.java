@@ -7,6 +7,7 @@ import com.example.recipemanagement.dto.CreateCategoryDto;
 import com.example.recipemanagement.dto.UpdateCategoryDto;
 import com.example.recipemanagement.service.CategoryService;
 import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/category")
 public class CategoryController {
 
+    @Autowired
     private CategoryService categoryService;
 
     @PostMapping("/add")

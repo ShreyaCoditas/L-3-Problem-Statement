@@ -12,9 +12,6 @@ import lombok.Data;
 @Builder
 public class AddRecipeDto {
 
-    @NotNull
-    @Positive
-    private Long recipeId;
 
     @NotBlank(message = "title is required")
     private String title;
@@ -22,11 +19,10 @@ public class AddRecipeDto {
     @NotBlank(message = "ingredients are required")
     private String ingredients;
 
-    @NotBlank(message = "Choose your difficulty level")
+    @NotNull(message = "Choose your difficulty level")
     private DifficultyLevel difficultyLevel;
 
-    //private RecipeStatus recipeStatus;
-    @NotBlank(message = "cooking duration is required")
+    @NotNull(message = "cooking duration is required")
     private String cookingDuration;
 
     @NotNull(message = "Category Id cannot be null")
